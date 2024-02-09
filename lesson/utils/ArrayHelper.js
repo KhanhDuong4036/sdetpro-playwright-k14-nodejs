@@ -1,8 +1,12 @@
-function filterEvenNumber(value, index, array){
+const filterEvenNumber = function(value, index, array){
     return value % 2 === 0;
 }
 
-function convertToEvenNumbers(value, index, array) {
+const filterOddNumber = function(value, index, array){
+    return value % 2 !== 0;
+}
+
+const  convertToEvenNumbers = function(value, index, array) {
     if(value % 2 !== 0){
         return value * 2;
     } else{
@@ -10,11 +14,11 @@ function convertToEvenNumbers(value, index, array) {
     }
 }
 
-function sortNumberASC(firstNumber, secondNumber){
+const sortNumberASC = function(firstNumber, secondNumber){
     return firstNumber - secondNumber;
 }
 
-function sortNumberDES(firstNumber, secondNumber){
+const sortNumberDES = function(firstNumber, secondNumber){
     return secondNumber - firstNumber;
 }
 
@@ -23,5 +27,6 @@ module.exports = {
     filterEvenNumber: filterEvenNumber,
     convertToEvenNumbers: convertToEvenNumbers,
     sortNumberASC: sortNumberASC,
-    sortNumberDES: sortNumberDES
+    sortNumberDES: sortNumberDES,
+    filterOddNumber: filterOddNumber
 }
