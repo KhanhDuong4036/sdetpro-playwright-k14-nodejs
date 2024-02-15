@@ -1,9 +1,9 @@
 const readLine = require('readline-sync');
 
 let userString = readLine.question('Please input your string: ');
-let formatStr = userString.replace(/[,.!?]/g, "").toLowerCase();
+let formatUserString = userString.replace(/[,.!?]/g, "").toLowerCase();
 
-console.log(countWords(formatStr));
+console.log(countWords(formatUserString));
 
 function countWords(string){
     let wordsArray = string.split(' ');
