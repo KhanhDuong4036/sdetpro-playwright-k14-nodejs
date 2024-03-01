@@ -11,7 +11,7 @@ printAllPosts(userId);
 async function printTargetPost(userId, postId) {
     const filteredPosts = await _getAllPost(userId);
     const targetPost = filteredPosts.filter(function (post) {
-            return (isUserIdMatching && isPostIdMatching);
+            return (post.id === postId);
         })[0];
 
         if (targetPost) {
