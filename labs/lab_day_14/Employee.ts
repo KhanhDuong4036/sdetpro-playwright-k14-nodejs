@@ -1,6 +1,7 @@
-export default class Employee {
+export default abstract class Employee {
     protected name: string;
     protected salary: number;
+    protected supportSalary: number = 0;
 
     constructor(name: string, salary:number){
         this.name = name;
@@ -10,7 +11,7 @@ export default class Employee {
         return this.name;
     }
     
-    getSalary(): number {
-        return this.salary;
-    }
+    abstract getSalary(): number
+
+    abstract getSupportSalary(): number;
 }
